@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Port Locations Worldwide</title>
+
+        <!-- Custom css for page -->
+        <link rel="stylesheet" href="styles.css" />
+
+        <!-- Tailwind CSS CDN -->
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- Bootstrap Icons CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+        <!-- Video Icons CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <h1>Marine Oil Spill Detection</h1>
+                <!-- Navigation menu for easy site access -->
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="map.html">Marine Traffic</a></li>
+                        <li><a href="history.html" class="active">Oil Spill History</a></li>
+                        <li><a href="detector.html">Oil Spill Detector</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <!-- Graph Section -->
+            <section class="history-section">
+                <h2>Oil Spill History</h2>
+                <p>Visualize historical data and trends of oil spills over time.</p>
+                <div class="chart-container">
+                    <canvas id="historyChart"></canvas>
+                </div>
+            </section>
+
+            <!-- Education Section -->
+            <section class="edu-sec">
+                <h2>Oil Spill History</h2>
+                <div class="video-grid">
+                    <article class="video-card">
+                        <div class="iframe-container">
+                            <iframe 
+                                class="video-iframe" 
+                                src="https://www.youtube.com/embed/VfZlaa3VHaw" 
+                                title="Deepwater Horizon Oil Spill | A Short Documentary | Disaster Diaries" 
+                                allowfullscreen
+                                loading="lazy"
+                            ></iframe>
+                        </div>
+                        <div class="video-content">
+                            <h3 class="video-title">Deepwater Horizon Oil Spill | A Short Documentary | Disaster Diaries</h3>
+                            <p class="video-description">On April 20, 2010, the Deepwater Horizon oil rig exploded, triggering the largest marine oil spill in history.</p>
+                            <div class="video-stats">
+                                <span class="stat-item"><i class="fas fa-eye stat-icon"></i> 167K</span>
+                                <span class="stat-item"><i class="fas fa-thumbs-up stat-icon"></i> 1.7K</span>
+                                <span class="stat-item"><i class="fas fa-clock stat-icon"></i> 12:52</span>
+                            </div>
+                            <span class="level-badge" data-level="beginner">Oil Spill History</span>
+                        </div>
+                    </article>
+        
+                    <article class="video-card">
+                        <div class="iframe-container">
+                            <iframe 
+                                class="video-iframe" 
+                                src="https://www.youtube.com/embed/3DbSlAg3F3A" 
+                                title="How Do We Clean Up Oil Spills?" 
+                                allowfullscreen
+                                loading="lazy"
+                            ></iframe>
+                        </div>
+                        <div class="video-content">
+                            <h3 class="video-title">How Do We Clean Up Oil Spills?</h3>
+                            <p class="video-description">When oil is spilled into the ocean, it has some devastating effects on the ecosystem. How do we clean it up?</p>
+                            <div class="video-stats">
+                                <span class="stat-item"><i class="fas fa-eye stat-icon"></i> 461K</span>
+                                <span class="stat-item"><i class="fas fa-thumbs-up stat-icon"></i> 4.3K</span>
+                                <span class="stat-item"><i class="fas fa-clock stat-icon"></i> 3:41</span>
+                            </div>
+                            <span class="level-badge" data-level="intermediate">Fix Oil Spill</span>
+                        </div>
+                    </article>
+        
+                    <article class="video-card">
+                        <div class="iframe-container">
+                            <iframe 
+                                class="video-iframe" 
+                                src="https://www.youtube.com/embed/nshSoLw0tdI" 
+                                title="What Happens After An Oil Spill?" 
+                                allowfullscreen
+                                loading="lazy"
+                            ></iframe>
+                        </div>
+                        <div class="video-content">
+                            <h3 class="video-title">What Happens After An Oil Spill?</h3>
+                            <p class="video-description">An oil spill has a tremendous amounts of deadly consequences. What happens after a disastrous amount of oil pours into our ocean? </p>
+                            <div class="video-stats">
+                                <span class="stat-item"><i class="fas fa-eye stat-icon"></i> 410K</span>
+                                <span class="stat-item"><i class="fas fa-thumbs-up stat-icon"></i> 8.8K</span>
+                                <span class="stat-item"><i class="fas fa-clock stat-icon"></i> 3:51</span>
+                            </div>
+                            <span class="level-badge" data-level="advanced">After Oil Spill</span>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Table Section -->
+            <section class="table-container">
+                <h2>Top 20 Oil Spills</h2>
+                <img src="image/top20.jpg" alt="Top 20 Oil Spills" style="display: block; margin-left: auto; margin-right: auto;" />
+                <table id="oilSpillTable">
+                    <thead>
+                        <tr>
+                            <th>Position</th>
+                            <th>Shipname</th>
+                            <th>Year</th>
+                            <th>Location</th>
+                            <th>Spill Size (tonnes)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr
+                            data-position="1"
+                            data-ship="ATLANTIC EMPRESS"
+                            data-year="1979"
+                            data-location="Off Tobago, West Indies"
+                            data-size="287,000"
+                            data-detail="In 1979, the Atlantic Empress collided with another tanker near Tobago, West Indies, releasing approximately 287,000 tonnes of crude oil. The spill caused extensive damage to marine ecosystems and local fisheries."
+                        >
+                            <td>1</td>
+                            <td>ATLANTIC EMPRESS</td>
+                            <td>1979</td>
+                            <td>Off Tobago, West Indies</td>
+                            <td>287,000</td>
+                        </tr>
+                        <tr
+                            data-position="2"
+                            data-ship="ABT SUMMER"
+                            data-year="1991"
+                            data-location="700 nautical miles off Angola"
+                            data-size="260,000"
+                            data-detail="The ABT Summer spill in 1991 occurred 700 nautical miles off Angola, releasing 260,000 tonnes of oil. This incident led to widespread marine pollution and adversely affected the regional environment."
+                        >
+                            <td>2</td>
+                            <td>ABT SUMMER</td>
+                            <td>1991</td>
+                            <td>700 nautical miles off Angola</td>
+                            <td>260,000</td>
+                        </tr>
+                        <tr
+                            data-position="3"
+                            data-ship="CASTILLO DE BELLVER"
+                            data-year="1983"
+                            data-location="Off Saldanha Bay, South Africa"
+                            data-size="252,000"
+                            data-detail="In 1983, the Castillo de Bellver spill off Saldanha Bay, South Africa, released 252,000 tonnes of oil, severely impacting the local marine life and coastal communities."
+                        >
+                            <td>3</td>
+                            <td>CASTILLO DE BELLVER</td>
+                            <td>1983</td>
+                            <td>Off Saldanha Bay, South Africa</td>
+                            <td>252,000</td>
+                        </tr>
+                        <tr
+                            data-position="4"
+                            data-ship="AMOCO CADIZ"
+                            data-year="1978"
+                            data-location="Off Brittany, France"
+                            data-size="223,000"
+                            data-detail="The Amoco Cadiz oil spill in 1978 off Brittany, France, is one of the largest in history, with 223,000 tonnes of oil spilled. This catastrophic event caused massive environmental and economic damage along the coast."
+                        >
+                            <td>4</td>
+                            <td>AMOCO CADIZ</td>
+                            <td>1978</td>
+                            <td>Off Brittany, France</td>
+                            <td>223,000</td>
+                        </tr>
+                        <tr
+                            data-position="5"
+                            data-ship="HAVEN"
+                            data-year="1991"
+                            data-location="Genoa, Italy"
+                            data-size="144,000"
+                            data-detail="In 1991, the Haven oil spill near Genoa, Italy, released 144,000 tonnes of oil, disrupting the Mediterranean marine environment and affecting local fisheries and tourism."
+                        >
+                            <td>5</td>
+                            <td>HAVEN</td>
+                            <td>1991</td>
+                            <td>Genoa, Italy</td>
+                            <td>144,000</td>
+                        </tr>
+                        <tr
+                            data-position="6"
+                            data-ship="ODYSSEY"
+                            data-year="1988"
+                            data-location="700 nautical miles off Nova Scotia, Canada"
+                            data-size="132,000"
+                            data-detail="The Odyssey spill in 1988, occurring 700 nautical miles off Nova Scotia, Canada, released 132,000 tonnes of oil, impacting the North Atlantic marine ecosystem."
+                        >
+                            <td>6</td>
+                            <td>ODYSSEY</td>
+                            <td>1988</td>
+                            <td>700 nautical miles off Nova Scotia, Canada</td>
+                            <td>132,000</td>
+                        </tr>
+                        <tr
+                            data-position="7"
+                            data-ship="TORREY CANYON"
+                            data-year="1967"
+                            data-location="Scilly Isles, UK"
+                            data-size="119,000"
+                            data-detail="The Torrey Canyon spill in 1967, near the Scilly Isles, UK, spilled 119,000 tonnes of oil. It was one of the first major oil spills, leading to significant changes in oil spill response policies."
+                        >
+                            <td>7</td>
+                            <td>TORREY CANYON</td>
+                            <td>1967</td>
+                            <td>Scilly Isles, UK</td>
+                            <td>119,000</td>
+                        </tr>
+                        <tr
+                            data-position="8"
+                            data-ship="SEA STAR"
+                            data-year="1972"
+                            data-location="Gulf of Oman"
+                            data-size="115,000"
+                            data-detail="In 1972, the Sea Star spill in the Gulf of Oman released 115,000 tonnes of oil, which adversely affected the sensitive marine environment in the region."
+                        >
+                            <td>8</td>
+                            <td>SEA STAR</td>
+                            <td>1972</td>
+                            <td>Gulf of Oman</td>
+                            <td>115,000</td>
+                        </tr>
+                        <tr
+                            data-position="9"
+                            data-ship="SANCHI"
+                            data-year="2018"
+                            data-location="Off Shanghai, China"
+                            data-size="113,000"
+                            data-detail="The Sanchi spill in 2018, off Shanghai, China, released 113,000 tonnes of oil. This event raised major concerns in an area with high industrial activity and sensitive ecological zones."
+                        >
+                            <td>9</td>
+                            <td>SANCHI</td>
+                            <td>2018</td>
+                            <td>Off Shanghai, China</td>
+                            <td>113,000</td>
+                        </tr>
+                        <tr
+                            data-position="10"
+                            data-ship="IRENES SERENADE"
+                            data-year="1980"
+                            data-location="Navarino Bay, Greece"
+                            data-size="100,000"
+                            data-detail="In 1980, the Irenes Serenade spill in Navarino Bay, Greece, released 100,000 tonnes of oil, impacting the pristine Mediterranean coastal environment and local communities."
+                        >
+                            <td>10</td>
+                            <td>IRENES SERENADE</td>
+                            <td>1980</td>
+                            <td>Navarino Bay, Greece</td>
+                            <td>100,000</td>
+                        </tr>
+                        <tr
+                            data-position="11"
+                            data-ship="URQUIOLA"
+                            data-year="1976"
+                            data-location="La Coruna, Spain"
+                            data-size="100,000"
+                            data-detail="The Urquiola spill in 1976 near La Coruna, Spain, released 100,000 tonnes of oil. This spill caused extensive pollution, affecting both marine ecosystems and local economies dependent on fishing."
+                        >
+                            <td>11</td>
+                            <td>URQUIOLA</td>
+                            <td>1976</td>
+                            <td>La Coruna, Spain</td>
+                            <td>100,000</td>
+                        </tr>
+                        <tr
+                            data-position="12"
+                            data-ship="HAWAIIAN PATRIOT"
+                            data-year="1977"
+                            data-location="300 nautical miles off Honolulu"
+                            data-size="95,000"
+                            data-detail="The Hawaiian Patriot spill in 1977, 300 nautical miles off Honolulu, released 95,000 tonnes of oil. It significantly damaged marine life and coral reefs in the Hawaiian region."
+                        >
+                            <td>12</td>
+                            <td>HAWAIIAN PATRIOT</td>
+                            <td>1977</td>
+                            <td>300 nautical miles off Honolulu</td>
+                            <td>95,000</td>
+                        </tr>
+                        <tr
+                            data-position="13"
+                            data-ship="INDEPENDENTA"
+                            data-year="1979"
+                            data-location="Bosphorus, Turkey"
+                            data-size="94,000"
+                            data-detail="In 1979, the Independenta spill in the Bosphorus, Turkey, released 94,000 tonnes of oil. This incident underscored the challenges of navigating one of the world's busiest waterways safely."
+                        >
+                            <td>13</td>
+                            <td>INDEPENDENTA</td>
+                            <td>1979</td>
+                            <td>Bosphorus, Turkey</td>
+                            <td>94,000</td>
+                        </tr>
+                        <tr
+                            data-position="14"
+                            data-ship="JAKOB MAERSK"
+                            data-year="1975"
+                            data-location="Oporto, Portugal"
+                            data-size="88,000"
+                            data-detail="The Jakob Maersk spill in 1975 near Oporto, Portugal, resulted in 88,000 tonnes of oil being spilled, causing significant environmental and economic disruption along the Portuguese coast."
+                        >
+                            <td>14</td>
+                            <td>JAKOB MAERSK</td>
+                            <td>1975</td>
+                            <td>Oporto, Portugal</td>
+                            <td>88,000</td>
+                        </tr>
+                        <tr
+                            data-position="15"
+                            data-ship="BRAER"
+                            data-year="1993"
+                            data-location="Shetland Islands, UK"
+                            data-size="85,000"
+                            data-detail="In 1993, the Braer spill near the Shetland Islands, UK, released 85,000 tonnes of oil. Although favorable weather helped disperse the oil, it remains a landmark incident in maritime environmental history."
+                        >
+                            <td>15</td>
+                            <td>BRAER</td>
+                            <td>1993</td>
+                            <td>Shetland Islands, UK</td>
+                            <td>85,000</td>
+                        </tr>
+                        <tr
+                            data-position="16"
+                            data-ship="AEGEAN SEA"
+                            data-year="1992"
+                            data-location="La Coruna, Spain"
+                            data-size="74,000"
+                            data-detail="The Aegean Sea spill in 1992, off La Coruna, Spain, released 74,000 tonnes of oil, which had significant impacts on marine life and coastal communities in the region."
+                        >
+                            <td>16</td>
+                            <td>AEGEAN SEA</td>
+                            <td>1992</td>
+                            <td>La Coruna, Spain</td>
+                            <td>74,000</td>
+                        </tr>
+                        <tr
+                            data-position="17"
+                            data-ship="SEA EMPRESS"
+                            data-year="1996"
+                            data-location="Milford Haven, UK"
+                            data-size="72,000"
+                            data-detail="The Sea Empress spill in 1996 at Milford Haven, UK, released 72,000 tonnes of oil, prompting extensive clean-up efforts and long-term environmental recovery initiatives."
+                        >
+                            <td>17</td>
+                            <td>SEA EMPRESS</td>
+                            <td>1996</td>
+                            <td>Milford Haven, UK</td>
+                            <td>72,000</td>
+                        </tr>
+                        <tr
+                            data-position="18"
+                            data-ship="KHARK 5"
+                            data-year="1989"
+                            data-location="120 nautical miles off Atlantic coast of Morocco"
+                            data-size="70,000"
+                            data-detail="In 1989, the Khark 5 spill occurred 120 nautical miles off the Atlantic coast of Morocco, releasing 70,000 tonnes of oil and impacting remote maritime regions."
+                        >
+                            <td>18</td>
+                            <td>KHARK 5</td>
+                            <td>1989</td>
+                            <td>120 nautical miles off Atlantic coast of Morocco</td>
+                            <td>70,000</td>
+                        </tr>
+                        <tr
+                            data-position="19"
+                            data-ship="NOVA"
+                            data-year="1985"
+                            data-location="Off Kharg Island, Gulf of Iran"
+                            data-size="70,000"
+                            data-detail="The Nova spill in 1985 near Kharg Island in the Gulf of Iran released 70,000 tonnes of oil, raising both environmental and geopolitical concerns in the region."
+                        >
+                            <td>19</td>
+                            <td>NOVA</td>
+                            <td>1985</td>
+                            <td>Off Kharg Island, Gulf of Iran</td>
+                            <td>70,000</td>
+                        </tr>
+                        <tr
+                            data-position="20"
+                            data-ship="KATINA P"
+                            data-year="1992"
+                            data-location="Off Maputo, Mozambique"
+                            data-size="67,000"
+                            data-detail="The Katina P spill in 1992 off Maputo, Mozambique, released 67,000 tonnes of oil, severely impacting the marine ecosystem and the livelihoods of coastal communities."
+                        >
+                            <td>20</td>
+                            <td>KATINA P</td>
+                            <td>1992</td>
+                            <td>Off Maputo, Mozambique</td>
+                            <td>67,000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Modal for Additional Details -->
+            <div class="modal-overlay" id="detailsModal">
+                <div class="modal-content">
+                    <span class="modal-close" id="modalClose">&times;</span>
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalDetails"></p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer Section -->
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <!-- Social Media Icons Column -->
+                    <div class="footer-social">
+                        <a href="https://twitter.com" target="_blank" class="social-link">
+                            <i class="bi bi-twitter"></i>
+                        </a>
+                        <a href="https://facebook.com" target="_blank" class="social-link">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" class="social-link">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="https://youtube.com" target="_blank" class="social-link">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="social-link">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                    </div>
+
+                    <!-- Footer & Link Section -->
+                    <div class="footer-links">
+                        <p class="copyright">© 2025 Marine Oil Spill Detection. All rights reserved.</p>
+                        <p class="links">
+                            <a href="terms.html" class="link-item"> <i class="bi bi-file-earmark-text"></i><span>Terms</span> </a> |
+                            <a href="privacy.html" class="link-item"> <i class="bi bi-file-earmark-lock-fill"></i><span>Privacy Policy</span> </a> |
+                            <a href="contact.html" class="link-item"> <i class="bi bi-envelope-fill"></i><span>Contact</span> </a>
+                        </p>
+                    </div>
+
+                    <!-- Email Subscription Column -->
+                    <div class="footer-subscribe">
+                        <form action="#" method="post" class="subscribe-form">
+                            <input type="email" name="email" placeholder="Your email" required class="email-input" />
+                            <button type="submit" class="subscribe-button">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Custom script for page -->
+        <script src="table.js" defer></script>
+        
+        <!-- Chart.js -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <!-- PapaParse for CSV parsing -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+    </body>
+</html>

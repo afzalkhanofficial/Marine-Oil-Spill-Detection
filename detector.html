@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Oil Spill Detector</title>
+  <!-- Custom CSS for page -->
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Bootstrap Icons CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Marine Oil Spill Detection</h1>
+      
+      <!-- Navigation menu for easy site access -->
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="map.html">Marine Traffic</a></li>
+          <li><a href="history.html">Oil Spill History</a></li>
+          <li><a href="detector.html" class="active">Oil Spill Detector</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="detect-text">
+      <div>
+        <h2>Oil Spill Detector</h2>
+        <p>Upload an image to detect potential oil spills using our AI‑powered detection system.</p>
+      </div>
+    </section>
+    <section class="detector">
+      <div class="detect">
+          <div class="detect-particle" style="top: 20%; left: 15%"></div>
+          <div class="detect-particle" style="top: 60%; left: 80%"></div>
+          <div class="detect-particle" style="top: 85%; left: 40%"></div>
+          <h3>Random Forest</h3>
+          <p>a machine learning algorithm that uses an ensemble of decision trees to make predictions, combining the outputs of multiple trees to improve accuracy and robustness.</p>
+          <a href="https://rf-model.onrender.com/" class="detect-btn" target="_blank">Try RF Model</a>
+      </div>
+      <div class="detect">
+        <div class="detect-particle" style="top: 20%; left: 15%"></div>
+          <div class="detect-particle" style="top: 60%; left: 80%"></div>
+          <div class="detect-particle" style="top: 85%; left: 40%"></div>
+          <h3>SVM</h3>
+          <p>a supervised machine learning algorithm that classifies data by finding a separating hyperplane. SVMs are effective for both classification and regression tasks.</p>
+          <a href="https://svm-model-kopi.onrender.com/" class="detect-btn" target="_blank">Try SVM Model</a>
+      </div>
+  </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <!-- Social Media Icons Column -->
+        <div class="footer-social">
+          <a href="https://twitter.com" target="_blank" class="social-link">
+            <i class="bi bi-twitter"></i>
+          </a>
+          <a href="https://facebook.com" target="_blank" class="social-link">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="https://instagram.com" target="_blank" class="social-link">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="https://youtube.com" target="_blank" class="social-link">
+            <i class="bi bi-youtube"></i>
+          </a>
+          <a href="https://linkedin.com" target="_blank" class="social-link">
+            <i class="bi bi-linkedin"></i>
+          </a>
+        </div>
+
+        <!-- Footer & Link Section -->
+        <div class="footer-links">
+          <p class="copyright">© 2025 Marine Oil Spill Detection. All rights reserved.</p>
+          <p class="links">
+            <a href="terms.html" class="link-item">
+              <i class="bi bi-file-earmark-text"></i><span>Terms</span>
+            </a> |
+            <a href="privacy.html" class="link-item">
+              <i class="bi bi-file-earmark-lock-fill"></i><span>Privacy Policy</span>
+            </a> |
+            <a href="contact.html" class="link-item">
+              <i class="bi bi-envelope-fill"></i><span>Contact</span>
+            </a>
+          </p>
+        </div>
+
+        <!-- Email Subscription Column -->
+        <div class="footer-subscribe">
+          <form action="#" method="post" class="subscribe-form">
+            <input type="email" name="email" placeholder="Your email" required class="email-input">
+            <button type="submit" class="subscribe-button">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

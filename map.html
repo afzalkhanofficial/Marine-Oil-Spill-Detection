@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Port Locations Worldwide</title>
+
+        <!-- Custom css for page -->
+        <link rel="stylesheet" href="styles.css" />
+
+        <!-- Tailwind CSS CDN -->
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- Bootstrap Icons CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+        <!-- Leaflet css-->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <h1>Marine Oil Spill Detection</h1>
+                <!-- Navigation menu for easy site access -->
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="map.html" class="active">Marine Traffic</a></li>
+                        <li><a href="history.html">Oil Spill History</a></li>
+                        <li><a href="detector.html">Oil Spill Detector</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <!-- Marine Traffic -->
+            <section>
+                <h2 class="img-h2">Marine Traffic</h2>
+                <div class="img-container">
+                    <img class="img-m" src="image/m4.png"/>
+                    <img class="img-m" src="image/m5.png"/>
+                    <img class="img-m" src="image/m1.png"/>
+                    <img class="img-m" src="image/m2.png"/>
+                    <img class="img-m" src="image/m3.png"/>
+                </div>
+            </section>
+
+            <!-- Map container -->
+            <section class="map-section">
+                <a href="https://www.marinetraffic.com/en/ais/home/centerx:81.3/centery:18.4/zoom:4" target="_blank">
+                    <h2>Port Locations Worldwide</h2>
+                </a>
+                <p>Explore high-resolution satellite imagery of global port locations.</p>
+                <div id="map"></div>
+            </section>
+
+            <!-- Map Image -->
+            <section>
+                <h2 class="img-h2">Vessel Traffic</h2>
+                <img class="img-map" src="image/map1.png" alt="Marine Traffic" style="display: block; margin-left: auto; margin-right: auto;" />
+                <h2 class="img-h2">Marine Traffic Density</h2>
+                <img class="img-map" src="image/map2.png" alt="Marine Traffic Density" style="display: block; margin-left: auto; margin-right: auto;" />
+            </section>
+        </main>
+
+        <!-- Footer Section -->
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <!-- Social Media Icons Column -->
+                    <div class="footer-social">
+                        <a href="https://twitter.com" target="_blank" class="social-link">
+                            <i class="bi bi-twitter"></i>
+                        </a>
+                        <a href="https://facebook.com" target="_blank" class="social-link">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" class="social-link">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="https://youtube.com" target="_blank" class="social-link">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="social-link">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                    </div>
+
+                    <!-- Footer & Link Section -->
+                    <div class="footer-links">
+                        <p class="copyright">© 2025 Marine Oil Spill Detection. All rights reserved.</p>
+                        <p class="links">
+                            <a href="terms.html" class="link-item"> <i class="bi bi-file-earmark-text"></i><span>Terms</span> </a> |
+                            <a href="privacy.html" class="link-item"> <i class="bi bi-file-earmark-lock-fill"></i><span>Privacy Policy</span> </a> |
+                            <a href="contact.html" class="link-item"> <i class="bi bi-envelope-fill"></i><span>Contact</span> </a>
+                        </p>
+                    </div>
+
+                    <!-- Email Subscription Column -->
+                    <div class="footer-subscribe">
+                        <form action="#" method="post" class="subscribe-form">
+                            <input type="email" name="email" placeholder="Your email" required class="email-input" />
+                            <button type="submit" class="subscribe-button">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Custom script for page -->
+        <script src="port.js" defer></script>
+
+        <!-- Leaflet js-->
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    </body>
+</html>
